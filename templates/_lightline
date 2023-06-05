@@ -3,7 +3,7 @@ auxfile autoload/lightline/colorscheme/@shortname.vim
 " File: @shortname.vim
 " Description: A dark, vibrant, and beautiful color scheme for Vim
 " Author: Prateek Tade <prateek.tade@gmail.com>
-" Source: https://github.com/Everblush/everblush.vim
+" Source: https://github.com/em-winterschon/modblush.vim
 " Last Modified: 24 Jan 2023
 " ----------------------------------------------------------------
 if &background ==# '@background'

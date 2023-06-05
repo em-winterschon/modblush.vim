@@ -1,8 +1,8 @@
-" Name:         Everblush
+" Name:         em-winterschon
 " Description:  A dark, vibrant and beautiful colorscheme for Vim
 " Author:       Mangeshrex <https://github.com/Mangeshrex>
 " Maintainer:   Mangeshrex <https://github.com/Mangeshrex>
-" Website:      https://github.com/Everblush/everblush.vim
+" Website:      https://github.com/em-winterschon/modblush.vim
 " License:      Vim License (see `:help license`)
 " Last Updated: Tue Jan 24 19:29:49 2023
 
@@ -11,25 +11,25 @@
 set background=dark
 
 hi clear
-let g:colors_name = 'everblush'
+let g:colors_name = 'modblush'
 
 let s:t_Co = exists('&t_Co') && !has('gui_running') ? (&t_Co ?? 0) : -1
 let s:italics = (&t_ZH != '' && &t_ZH != '[7m') || has('gui_running')
 
 if (has('termguicolors') && &termguicolors) || has('gui_running')
-  let g:terminal_ansi_colors = ['#232a2d', '#e57474', '#8ccf7e', '#e5c76b', '#67b0e8', '#c47fd5', '#6cbfbf', '#b3b9b8', '#2d3437', '#ef7e7e', '#96d988', '#f4d67a', '#71baf2', '#ce89df', '#67cbe7', '#bdc3c2']
+  let g:terminal_ansi_colors = ['#232a2d', '#e57474', '#c47fd5', '#e5c76b', '#67b0e8', '#c47fd5', '#c47fd5', '#b3b9b8', '#2d3437', '#ef7e7e', '#c47fd5', '#f4d67a', '#71baf2', '#ce89df', '#67cbe7', '#bdc3c2']
 endif
-if get(g:, 'everblushNR', 1)
+if get(g:, 'modblushNR', 1)
   hi CursorLineNr guifg=#232a2d guibg=NONE gui=NONE cterm=NONE
 else
   hi CursorLineNr guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
 endif
-if get(g:, 'everblush_transp_bg', 0)
+if get(g:, 'modblush_transp_bg', 0)
   hi Conceal guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
   hi CursorColumn guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
-  hi DiffAdd guifg=#8ccf7e guibg=NONE gui=NONE cterm=NONE
+  hi DiffAdd guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
   hi DiffChange guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
-  hi DiffDelete guifg=#6cbfbf guibg=NONE gui=NONE cterm=NONE
+  hi DiffDelete guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
   hi DiffText guifg=#e57474 guibg=NONE gui=NONE cterm=NONE
   hi FoldColumn guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
   hi Folded guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
@@ -48,9 +48,9 @@ if get(g:, 'everblush_transp_bg', 0)
 else
   hi Conceal guifg=#67b0e8 guibg=#141b1e gui=NONE cterm=NONE
   hi CursorColumn guifg=NONE guibg=#141b1e gui=NONE cterm=NONE
-  hi DiffAdd guifg=#8ccf7e guibg=#141b1e gui=NONE cterm=NONE
+  hi DiffAdd guifg=#c47fd5 guibg=#141b1e gui=NONE cterm=NONE
   hi DiffChange guifg=#c47fd5 guibg=#141b1e gui=NONE cterm=NONE
-  hi DiffDelete guifg=#6cbfbf guibg=#141b1e gui=NONE cterm=NONE
+  hi DiffDelete guifg=#c47fd5 guibg=#141b1e gui=NONE cterm=NONE
   hi DiffText guifg=#e57474 guibg=#141b1e gui=NONE cterm=NONE
   hi FoldColumn guifg=#67b0e8 guibg=#141b1e gui=NONE cterm=NONE
   hi Folded guifg=#67b0e8 guibg=#141b1e gui=NONE cterm=NONE
@@ -77,7 +77,7 @@ hi Cursor guifg=#dadada guibg=#dadada gui=NONE cterm=NONE
 hi CursorIM guifg=#dadada guibg=#dadada gui=NONE cterm=NONE
 hi CursorLine guifg=NONE guibg=#232a2d gui=NONE cterm=NONE
 hi Debug guifg=#ce89df guibg=NONE gui=NONE cterm=NONE
-hi Define guifg=#6cbfbf guibg=NONE gui=NONE cterm=NONE
+hi Define guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi Delimiter guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
 hi Directory guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
 hi EndOfBuffer guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
@@ -85,7 +85,7 @@ hi Error guifg=#e57474 guibg=NONE gui=NONE cterm=NONE
 hi ErrorMsg guifg=#e57474 guibg=#2d3437 gui=NONE cterm=NONE
 hi Exception guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
 hi Float guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
-hi FloatBorder guifg=#8ccf7e guibg=NONE gui=NONE cterm=NONE
+hi FloatBorder guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi Function guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
 hi Identifier guifg=#e57474 guibg=NONE gui=NONE cterm=NONE
 hi IncSearch guifg=#e5c76b guibg=NONE gui=NONE cterm=NONE
@@ -94,18 +94,18 @@ hi Keyword guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi Label guifg=#71baf2 guibg=NONE gui=NONE cterm=NONE
 hi LineNr guifg=#424c50 guibg=NONE gui=NONE cterm=NONE
 hi Macro guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
-hi MatchParen guifg=#dadada guibg=#636665 gui=bold cterm=NONE
+hi MatchParen guifg=#e57474 guibg=NONE gui=NONE cterm=NONE
 hi MoreMsg guifg=#67cbe7 guibg=NONE gui=NONE cterm=NONE
 hi NonText guifg=#c47fd5 guibg=#232a2d gui=NONE cterm=NONE
-hi Number guifg=#6cbfbf guibg=NONE gui=NONE cterm=NONE
+hi Number guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi Operator guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
 hi Pmenu guifg=#b3b9b8 guibg=#232a2d gui=NONE cterm=NONE
 hi PmenuSel guifg=#2d3437 guibg=#c47fd5 gui=NONE cterm=NONE
-hi PmenuThumb guifg=NONE guibg=#8ccf7e gui=NONE cterm=NONE
+hi PmenuThumb guifg=NONE guibg=#c47fd5 gui=NONE cterm=NONE
 hi PreCondit guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi PreProc guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
 hi Question guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
-hi QuickFixLine guifg=NONE guibg=#8ccf7e gui=NONE cterm=NONE
+hi QuickFixLine guifg=NONE guibg=#c47fd5 gui=NONE cterm=NONE
 hi Repeat guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi Search guifg=#67b0e8 guibg=#2d3437 gui=NONE cterm=NONE
 hi SignColumn guifg=NONE guibg=#232a2d gui=NONE cterm=NONE
@@ -120,16 +120,16 @@ hi SpellRare guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi Statement guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi Storage guifg=#ef7e7e guibg=NONE gui=NONE cterm=NONE
 hi StorageClass guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
-hi String guifg=#8ccf7e guibg=NONE gui=NONE cterm=NONE
-hi Structure guifg=#6cbfbf guibg=NONE gui=NONE cterm=NONE
-hi Substitute guifg=#e5c76b guibg=#6cbfbf gui=NONE cterm=NONE
+hi String guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
+hi Structure guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
+hi Substitute guifg=#e5c76b guibg=#c47fd5 gui=NONE cterm=NONE
 hi TabLine guifg=#b3b9b8 guibg=#2d3437 gui=NONE cterm=NONE
 hi TabLineFill guifg=NONE guibg=#2d3437 gui=NONE cterm=NONE
 hi Tag guifg=#bdc3c2 guibg=NONE gui=NONE cterm=NONE
 hi Title guifg=#67b0e8 guibg=NONE gui=bold cterm=bold
 hi Todo guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi Type guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
-hi Typedef guifg=#6cbfbf guibg=NONE gui=NONE cterm=NONE
+hi Typedef guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi Underlined guifg=#e5c76b guibg=NONE gui=NONE cterm=NONE
 hi Variable guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi VertSplit guifg=#2d3437 guibg=#232a2d gui=NONE cterm=NONE
@@ -140,7 +140,7 @@ hi WildMenu guifg=#232a2d guibg=#67b0e8 gui=NONE cterm=NONE
 hi lCursor guifg=#dadada guibg=#dadada gui=NONE cterm=NONE
 hi markdownLinkText guifg=#ef7e7e guibg=NONE gui=NONE cterm=NONE
 hi DiagnosticError guifg=#e57474 guibg=NONE gui=NONE cterm=NONE
-hi DiagnosticHint guifg=#8ccf7e guibg=NONE gui=NONE cterm=NONE
+hi DiagnosticHint guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi DiagnosticInfo guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
 hi DiagnosticWarn guifg=#e5c76b guibg=NONE gui=NONE cterm=NONE
 hi healthError guifg=#e57474 guibg=NONE gui=NONE cterm=NONE
@@ -150,16 +150,16 @@ if !s:italics
   hi Comment gui=NONE cterm=NONE
   hi SpecialComment gui=NONE cterm=NONE
 endif
-if get(g:, 'everblush_transp_bg', 0)
+if get(g:, 'modblush_transp_bg', 0)
   hi LspTroubleNormal guifg=#dadada guibg=NONE gui=NONE cterm=NONE
 else
   hi LspTroubleNormal guifg=#dadada guibg=#141b1e gui=NONE cterm=NONE
 endif
-hi LspTroubleCount guifg=#6cbfbf guibg=#dadada gui=NONE cterm=NONE
+hi LspTroubleCount guifg=#c47fd5 guibg=#dadada gui=NONE cterm=NONE
 hi LspTroubleText guifg=#dadada guibg=NONE gui=NONE cterm=NONE
 hi illuminatedCurWord guifg=NONE guibg=#dadada gui=NONE cterm=NONE
 hi illuminatedWord guifg=NONE guibg=#dadada gui=NONE cterm=NONE
-if get(g:, 'everblush_transp_bg', 0)
+if get(g:, 'modblush_transp_bg', 0)
   hi NeogitDiffAddHighlight guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
   hi NeogitDiffContextHighlight guifg=#dadada guibg=NONE gui=NONE cterm=NONE
   hi NeogitDiffDeleteHighlight guifg=#e57474 guibg=NONE gui=NONE cterm=NONE
@@ -170,25 +170,25 @@ else
   hi NeogitDiffDeleteHighlight guifg=#e57474 guibg=#141b1e gui=NONE cterm=NONE
   hi NeogitHunkHeader guifg=#dadada guibg=#141b1e gui=NONE cterm=NONE
 endif
-hi NeogitBranch guifg=#6cbfbf guibg=NONE gui=NONE cterm=NONE
+hi NeogitBranch guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi NeogitHunkHeaderHighlight guifg=#b3b9b8 guibg=#404749 gui=NONE cterm=NONE
-hi NeogitRemote guifg=#6cbfbf guibg=NONE gui=NONE cterm=NONE
-if get(g:, 'everblush_transp_bg', 0)
+hi NeogitRemote guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
+if get(g:, 'modblush_transp_bg', 0)
   hi CmpDocumentationBorder guifg=#dadada guibg=NONE gui=NONE cterm=NONE
   hi CmpItemAbbr guifg=#dadada guibg=NONE gui=NONE cterm=NONE
-  hi CmpItemAbbrDeprecated guifg=#8ccf7e guibg=NONE gui=NONE cterm=NONE
+  hi CmpItemAbbrDeprecated guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
   hi CmpItemAbbrMatch guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
   hi CmpItemAbbrMatchFuzzy guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
   hi CmpItemKind guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
-  hi CmpItemMenu guifg=#8ccf7e guibg=NONE gui=NONE cterm=NONE
+  hi CmpItemMenu guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 else
   hi CmpDocumentationBorder guifg=#dadada guibg=#141b1e gui=NONE cterm=NONE
   hi CmpItemAbbr guifg=#dadada guibg=#141b1e gui=NONE cterm=NONE
-  hi CmpItemAbbrDeprecated guifg=#8ccf7e guibg=#141b1e gui=NONE cterm=NONE
+  hi CmpItemAbbrDeprecated guifg=#c47fd5 guibg=#141b1e gui=NONE cterm=NONE
   hi CmpItemAbbrMatch guifg=#b3b9b8 guibg=#141b1e gui=NONE cterm=NONE
   hi CmpItemAbbrMatchFuzzy guifg=#b3b9b8 guibg=#141b1e gui=NONE cterm=NONE
   hi CmpItemKind guifg=#67b0e8 guibg=#141b1e gui=NONE cterm=NONE
-  hi CmpItemMenu guifg=#8ccf7e guibg=#141b1e gui=NONE cterm=NONE
+  hi CmpItemMenu guifg=#c47fd5 guibg=#141b1e gui=NONE cterm=NONE
 endif
 hi GitGutterAdd guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
 hi GitGutterChange guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
@@ -196,7 +196,7 @@ hi GitGutterDelete guifg=#e57474 guibg=NONE gui=NONE cterm=NONE
 hi GitSignsAdd guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
 hi GitSignsChange guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi GitSignsDelete guifg=#e57474 guibg=NONE gui=NONE cterm=NONE
-if get(g:, 'everblush_transp_bg', 0)
+if get(g:, 'modblush_transp_bg', 0)
   hi TelescopeBorder guifg=#232a2d guibg=NONE gui=NONE cterm=NONE
   hi TelescopeNormal guifg=#dadada guibg=NONE gui=NONE cterm=NONE
 else
@@ -205,7 +205,7 @@ else
 endif
 hi TelescopeSelection guifg=#141b1e guibg=#c47fd5 gui=NONE cterm=NONE
 hi IndentBlanklineChar guifg=#232a2d guibg=NONE gui=NONE cterm=NONE
-if get(g:, 'everblush_transp_bg', 0)
+if get(g:, 'modblush_transp_bg', 0)
   hi NvimTreeFolderIcon guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
   hi NvimTreeNormal guifg=#dadada guibg=NONE gui=NONE cterm=NONE
   hi NvimTreeNormalNC guifg=#dadada guibg=NONE gui=NONE cterm=NONE
@@ -216,51 +216,51 @@ else
   hi NvimTreeNormalNC guifg=#dadada guibg=#141b1e gui=NONE cterm=NONE
   hi NvimTreeStatusLineNC guifg=#141b1e guibg=#141b1e gui=NONE cterm=NONE
 endif
-hi NvimTreeEmptyFolderName guifg=#8ccf7e guibg=NONE gui=NONE cterm=NONE
+hi NvimTreeEmptyFolderName guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi NvimTreeFolderName guifg=#dadada guibg=NONE gui=NONE cterm=NONE
 hi NvimTreeGitDeleted guifg=#e57474 guibg=NONE gui=NONE cterm=NONE
 hi NvimTreeGitDirty guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi NvimTreeGitNew guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
 hi NvimTreeImageFile guifg=#dadada guibg=NONE gui=NONE cterm=NONE
 hi NvimTreeIndentMarker guifg=#232a2d guibg=NONE gui=NONE cterm=NONE
-hi NvimTreeOpenedFolderName guifg=#8ccf7e guibg=NONE gui=NONE cterm=NONE
+hi NvimTreeOpenedFolderName guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi NvimTreeRootFolder guifg=#e57474 guibg=NONE gui=NONE cterm=NONE
-hi NvimTreeSpecialFile guifg=#6cbfbf guibg=NONE gui=NONE cterm=NONE
+hi NvimTreeSpecialFile guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi NvimTreeSymlink guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
-if get(g:, 'everblush_transp_bg', 0)
+if get(g:, 'modblush_transp_bg', 0)
   hi LspFloatWinNormal guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 else
   hi LspFloatWinNormal guifg=NONE guibg=#141b1e gui=NONE cterm=NONE
 endif
-hi DefinitionCount guifg=#6cbfbf guibg=NONE gui=NONE cterm=NONE
+hi DefinitionCount guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi DefinitionIcon guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
 hi LspFloatWinBorder guifg=#141b1e guibg=NONE gui=NONE cterm=NONE
 hi LspSagaBorderTitle guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
 hi LspSagaCodeActionBorder guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
-hi LspSagaCodeActionContent guifg=#6cbfbf guibg=NONE gui=NONE cterm=NONE
+hi LspSagaCodeActionContent guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi LspSagaCodeActionTitle guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
 hi LspSagaDefPreviewBorder guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
 hi LspSagaFinderSelection guifg=#e57474 guibg=NONE gui=NONE cterm=NONE
 hi LspSagaHoverBorder guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
 hi LspSagaRenameBorder guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
 hi LspSagaSignatureHelpBorder guifg=#e57474 guibg=NONE gui=NONE cterm=NONE
-hi ReferencesCount guifg=#6cbfbf guibg=NONE gui=NONE cterm=NONE
+hi ReferencesCount guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi ReferencesIcon guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
 hi TargetWord guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
-if get(g:, 'everblush_transp_bg', 0)
+if get(g:, 'modblush_transp_bg', 0)
   hi BufferLineFill guifg=#141b1e guibg=NONE gui=NONE cterm=NONE
 else
   hi BufferLineFill guifg=#141b1e guibg=#141b1e gui=NONE cterm=NONE
 endif
-hi BufferLineIndicatorSelected guifg=#8ccf7e guibg=NONE gui=NONE cterm=NONE
+hi BufferLineIndicatorSelected guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi TSAttribute guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
-hi TSBoolean guifg=#6cbfbf guibg=NONE gui=NONE cterm=NONE
+hi TSBoolean guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi TSCharacter guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
 hi TSComment guifg=#2d3437 guibg=NONE gui=NONE cterm=NONE
 hi TSConditional guifg=#e57474 guibg=NONE gui=NONE cterm=NONE
 hi TSConstBuiltin guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
 hi TSConstMacro guifg=#e5c76b guibg=NONE gui=NONE cterm=NONE
-hi TSConstant guifg=#6cbfbf guibg=NONE gui=NONE cterm=NONE
+hi TSConstant guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi TSConstructor guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
 hi TSDanger guifg=#2d3437 guibg=NONE gui=NONE cterm=NONE
 hi TSEmphasis guifg=#b3b9b8 guibg=NONE gui=italic cterm=italic
@@ -270,15 +270,15 @@ hi TSException guifg=#2d3437 guibg=NONE gui=NONE cterm=NONE
 hi TSField guifg=#e57474 guibg=NONE gui=NONE cterm=NONE
 hi TSFloat guifg=#2d3437 guibg=NONE gui=NONE cterm=NONE
 hi TSFuncBuiltin guifg=#67cbe7 guibg=NONE gui=NONE cterm=NONE
-hi TSFuncMacro guifg=#8ccf7e guibg=NONE gui=NONE cterm=NONE
+hi TSFuncMacro guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi TSFunction guifg=#e57474 guibg=NONE gui=NONE cterm=NONE
 hi TSInclude guifg=#ef7e7e guibg=NONE gui=NONE cterm=NONE
 hi TSKeyword guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi TSKeywordFunction guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
 hi TSKeywordReturn guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
 hi TSLabel guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
-hi TSLiteral guifg=#8ccf7e guibg=NONE gui=NONE cterm=NONE
-hi TSMath guifg=#6cbfbf guibg=NONE gui=NONE cterm=NONE
+hi TSLiteral guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
+hi TSMath guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi TSMethod guifg=#71baf2 guibg=NONE gui=NONE cterm=NONE
 hi TSNamespace guifg=#ef7e7e guibg=NONE gui=NONE cterm=NONE
 hi TSNote guifg=#2d3437 guibg=NONE gui=NONE cterm=NONE
@@ -291,9 +291,9 @@ hi TSPunctDelimiter guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
 hi TSPunctSpecial guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
 hi TSRepeat guifg=#f4d67a guibg=NONE gui=NONE cterm=NONE
 hi TSStrike guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
-hi TSString guifg=#8ccf7e guibg=NONE gui=NONE cterm=NONE
+hi TSString guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi TSStringEscape guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
-hi TSStringRegex guifg=#8ccf7e guibg=NONE gui=NONE cterm=NONE
+hi TSStringRegex guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi TSStringSpecial guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
 hi TSStrong guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
 hi TSSymbol guifg=#e57474 guibg=NONE gui=NONE cterm=NONE
@@ -301,7 +301,7 @@ hi TSTag guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
 hi TSTagAttribute guifg=#e57474 guibg=NONE gui=NONE cterm=NONE
 hi TSTagDelimiter guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
 hi TSText guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
-hi TSTextReference guifg=#6cbfbf guibg=NONE gui=NONE cterm=NONE
+hi TSTextReference guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi TSTitle guifg=#e5c76b guibg=NONE gui=NONE cterm=NONE
 hi TSType guifg=#e5c76b guibg=NONE gui=NONE cterm=NONE
 hi TSTypeBuiltin guifg=#e5c76b guibg=NONE gui=NONE cterm=NONE
@@ -326,7 +326,7 @@ hi cCppOutInGroup guifg=#2d3437 guibg=NONE gui=NONE cterm=NONE
 hi cCppOutSkip guifg=#2d3437 guibg=NONE gui=NONE cterm=NONE
 hi cCppOutWrapper guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi cCppParen guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
-hi cCppString guifg=#8ccf7e guibg=NONE gui=NONE cterm=NONE
+hi cCppString guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi cCurlyError guifg=#b3b9b8 guibg=#ef7e7e gui=NONE cterm=NONE
 hi cErrInBracket guifg=#b3b9b8 guibg=#ef7e7e gui=NONE cterm=NONE
 hi cErrInParen guifg=#b3b9b8 guibg=#ef7e7e gui=NONE cterm=NONE
@@ -341,7 +341,7 @@ hi cSpecial guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
 hi cSpecialCharacter guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
 hi cStatement guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi cStorageClass guifg=#e5c76b guibg=NONE gui=NONE cterm=NONE
-hi cString guifg=#8ccf7e guibg=NONE gui=NONE cterm=NONE
+hi cString guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi cType guifg=#e5c76b guibg=NONE gui=NONE cterm=NONE
 hi cUserCont guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
 hi goBlock guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
@@ -370,13 +370,13 @@ hi goLabel guifg=#e5c76b guibg=NONE gui=NONE cterm=NONE
 hi goOctalError guifg=#e57474 guibg=NONE gui=NONE cterm=NONE
 hi goOctalInt guifg=#f4d67a guibg=NONE gui=NONE cterm=NONE
 hi goParen guifg=#b3b9b8 guibg=NONE gui=NONE cterm=NONE
-hi goRawString guifg=#96d988 guibg=NONE gui=NONE cterm=NONE
+hi goRawString guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi goRepeat guifg=#e5c76b guibg=NONE gui=NONE cterm=NONE
 hi goSignedInts guifg=#f4d67a guibg=NONE gui=NONE cterm=NONE
 hi goSpaceError guifg=#232a2d guibg=#e57474 gui=NONE cterm=NONE
 hi goSpecialString guifg=#71baf2 guibg=NONE gui=NONE cterm=NONE
 hi goStatement guifg=#e57474 guibg=NONE gui=NONE cterm=NONE
-hi goString guifg=#96d988 guibg=NONE gui=NONE cterm=NONE
+hi goString guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi goTSComment guifg=#2d3437 guibg=NONE gui=NONE cterm=NONE
 hi goTSFunction guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
 hi goTSInclude guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
@@ -385,10 +385,10 @@ hi goTSMethod guifg=#67b0e8 guibg=NONE gui=NONE cterm=NONE
 hi goTSNumber guifg=#2d3437 guibg=NONE gui=NONE cterm=NONE
 hi goTSOperator guifg=#71baf2 guibg=NONE gui=NONE cterm=NONE
 hi goTSProperty guifg=#e57474 guibg=NONE gui=NONE cterm=NONE
-hi goTSPunctBracket guifg=#6cbfbf guibg=NONE gui=NONE cterm=NONE
+hi goTSPunctBracket guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi goTSPunctDelimiter guifg=#ce89df guibg=NONE gui=NONE cterm=NONE
 hi goTSRepeat guifg=#e5c76b guibg=NONE gui=NONE cterm=NONE
-hi goTSString guifg=#96d988 guibg=NONE gui=NONE cterm=NONE
+hi goTSString guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
 hi goTSType guifg=#e5c76b guibg=NONE gui=NONE cterm=NONE
 hi goTSTypeBuiltin guifg=#e5c76b guibg=NONE gui=NONE cterm=NONE
 hi goTSVariable guifg=#c47fd5 guibg=NONE gui=NONE cterm=NONE
@@ -400,12 +400,12 @@ if !s:italics
 endif
 
 if s:t_Co >= 256
-  if get(g:, 'everblushNR', 1)
+  if get(g:, 'modblushNR', 1)
     hi CursorLineNr ctermfg=235 ctermbg=NONE cterm=NONE
   else
     hi CursorLineNr ctermfg=250 ctermbg=NONE cterm=NONE
   endif
-  if get(g:, 'everblush_transp_bg', 0)
+  if get(g:, 'modblush_transp_bg', 0)
     hi Conceal ctermfg=110 ctermbg=NONE cterm=NONE
     hi CursorColumn ctermfg=NONE ctermbg=NONE cterm=NONE
     hi DiffAdd ctermfg=114 ctermbg=NONE cterm=NONE
@@ -475,7 +475,7 @@ if s:t_Co >= 256
   hi Label ctermfg=110 ctermbg=NONE cterm=NONE
   hi LineNr ctermfg=236 ctermbg=NONE cterm=NONE
   hi Macro ctermfg=176 ctermbg=NONE cterm=NONE
-  hi MatchParen ctermfg=174 ctermbg=NONE cterm=bold
+  hi MatchParen ctermfg=174 ctermbg=NONE cterm=NONE
   hi MoreMsg ctermfg=81 ctermbg=NONE cterm=NONE
   hi NonText ctermfg=176 ctermbg=235 cterm=NONE
   hi Number ctermfg=73 ctermbg=NONE cterm=NONE
@@ -531,7 +531,7 @@ if s:t_Co >= 256
     hi Comment cterm=NONE
     hi SpecialComment cterm=NONE
   endif
-  if get(g:, 'everblush_transp_bg', 0)
+  if get(g:, 'modblush_transp_bg', 0)
     hi LspTroubleNormal ctermfg=253 ctermbg=NONE cterm=NONE
   else
     hi LspTroubleNormal ctermfg=253 ctermbg=234 cterm=NONE
@@ -540,7 +540,7 @@ if s:t_Co >= 256
   hi LspTroubleText ctermfg=253 ctermbg=NONE cterm=NONE
   hi illuminatedCurWord ctermfg=NONE ctermbg=253 cterm=NONE
   hi illuminatedWord ctermfg=NONE ctermbg=253 cterm=NONE
-  if get(g:, 'everblush_transp_bg', 0)
+  if get(g:, 'modblush_transp_bg', 0)
     hi NeogitDiffAddHighlight ctermfg=110 ctermbg=NONE cterm=NONE
     hi NeogitDiffContextHighlight ctermfg=253 ctermbg=NONE cterm=NONE
     hi NeogitDiffDeleteHighlight ctermfg=174 ctermbg=NONE cterm=NONE
@@ -554,7 +554,7 @@ if s:t_Co >= 256
   hi NeogitBranch ctermfg=73 ctermbg=NONE cterm=NONE
   hi NeogitHunkHeaderHighlight ctermfg=250 ctermbg=238 cterm=NONE
   hi NeogitRemote ctermfg=73 ctermbg=NONE cterm=NONE
-  if get(g:, 'everblush_transp_bg', 0)
+  if get(g:, 'modblush_transp_bg', 0)
     hi CmpDocumentationBorder ctermfg=253 ctermbg=NONE cterm=NONE
     hi CmpItemAbbr ctermfg=253 ctermbg=NONE cterm=NONE
     hi CmpItemAbbrDeprecated ctermfg=114 ctermbg=NONE cterm=NONE
@@ -577,7 +577,7 @@ if s:t_Co >= 256
   hi GitSignsAdd ctermfg=110 ctermbg=NONE cterm=NONE
   hi GitSignsChange ctermfg=176 ctermbg=NONE cterm=NONE
   hi GitSignsDelete ctermfg=174 ctermbg=NONE cterm=NONE
-  if get(g:, 'everblush_transp_bg', 0)
+  if get(g:, 'modblush_transp_bg', 0)
     hi TelescopeBorder ctermfg=235 ctermbg=NONE cterm=NONE
     hi TelescopeNormal ctermfg=253 ctermbg=NONE cterm=NONE
   else
@@ -586,7 +586,7 @@ if s:t_Co >= 256
   endif
   hi TelescopeSelection ctermfg=234 ctermbg=176 cterm=NONE
   hi IndentBlanklineChar ctermfg=235 ctermbg=NONE cterm=NONE
-  if get(g:, 'everblush_transp_bg', 0)
+  if get(g:, 'modblush_transp_bg', 0)
     hi NvimTreeFolderIcon ctermfg=110 ctermbg=NONE cterm=NONE
     hi NvimTreeNormal ctermfg=253 ctermbg=NONE cterm=NONE
     hi NvimTreeNormalNC ctermfg=253 ctermbg=NONE cterm=NONE
@@ -608,7 +608,7 @@ if s:t_Co >= 256
   hi NvimTreeRootFolder ctermfg=174 ctermbg=NONE cterm=NONE
   hi NvimTreeSpecialFile ctermfg=73 ctermbg=NONE cterm=NONE
   hi NvimTreeSymlink ctermfg=250 ctermbg=NONE cterm=NONE
-  if get(g:, 'everblush_transp_bg', 0)
+  if get(g:, 'modblush_transp_bg', 0)
     hi LspFloatWinNormal ctermfg=NONE ctermbg=NONE cterm=NONE
   else
     hi LspFloatWinNormal ctermfg=NONE ctermbg=234 cterm=NONE
@@ -628,7 +628,7 @@ if s:t_Co >= 256
   hi ReferencesCount ctermfg=73 ctermbg=NONE cterm=NONE
   hi ReferencesIcon ctermfg=250 ctermbg=NONE cterm=NONE
   hi TargetWord ctermfg=250 ctermbg=NONE cterm=NONE
-  if get(g:, 'everblush_transp_bg', 0)
+  if get(g:, 'modblush_transp_bg', 0)
     hi BufferLineFill ctermfg=234 ctermbg=NONE cterm=NONE
   else
     hi BufferLineFill ctermfg=234 ctermbg=234 cterm=NONE
@@ -786,15 +786,15 @@ endif
 " Background: dark
 " Color: color0     #232a2d ~
 " Color: color1     #e57474 ~
-" Color: color2     #8ccf7e ~
+" Color: color2     #c47fd5 ~
 " Color: color3     #e5c76b ~
 " Color: color4     #67b0e8 ~
 " Color: color5     #c47fd5 ~
-" Color: color6     #6cbfbf ~
+" Color: color6     #c47fd5 ~
 " Color: color7     #b3b9b8 ~
 " Color: color8     #2d3437 ~
 " Color: color9     #ef7e7e ~
-" Color: color10    #96d988 ~
+" Color: color10    #c47fd5 ~
 " Color: color11    #f4d67a ~
 " Color: color12    #71baf2 ~
 " Color: color13    #ce89df ~

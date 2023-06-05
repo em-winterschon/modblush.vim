@@ -1,7 +1,7 @@
 ; vim: ft=colortemplate
 
 ; Base
-#if get(g:, 'everblushNR', 1)
+#if get(g:, 'modblushNR', 1)
     CursorLineNr                color0     none
 #else
     CursorLineNr                color7     none

@@ -1,8 +1,8 @@
 " ----------------------------------------------------------------
-" File: everblush.vim
+" File: modblush.vim
 " Description: A dark, vibrant, and beautiful color scheme for Vim
 " Author: Prateek Tade <prateek.tade@gmail.com>
-" Source: https://github.com/Everblush/everblush.vim
+" Source: https://github.com/em-winterschon/modblush.vim
 " Last Modified: 24 Jan 2023
 " ----------------------------------------------------------------
 if &background ==# 'dark'
@@ -46,5 +46,5 @@ if &background ==# 'dark'
     let s:p.tabline.middle = [ [ s:background, s:background ] ]
     let s:p.tabline.right = [ [ s:background, s:color5 ] ]
 
-    let g:lightline#colorscheme#everblush#palette = lightline#colorscheme#flatten(s:p)
+    let g:lightline#colorscheme#modblush#palette = lightline#colorscheme#flatten(s:p)
 endif
